@@ -9,6 +9,7 @@ var backgroundImg,platform;
 var bird, slingShot;
 var bg = "sprites/bg.png";
 var noEstilingue = true;
+var link = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo";
 
 function preload() {
     
@@ -93,7 +94,7 @@ function keyPressed(){
 }
 
 async function fundo(){
-    var resposta = await fetch ("http://worldtimeapi.org/api/timezone/America/Sao_Paulo");
+    var resposta = await fetch (link);
     console.log(resposta);
     var respostaJ = await resposta.json();
     console.log(respostaJ);
